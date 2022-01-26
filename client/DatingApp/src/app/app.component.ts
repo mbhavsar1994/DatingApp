@@ -10,8 +10,6 @@ import { User } from './_models/user';
 })
 export class AppComponent implements OnInit {
   title = 'The Dating app';
-  users: any;
-  getUserUrl = 'https://localhost:5001/api/users';
 
 
   constructor(private accountService: AccountService) { }

@@ -1,3 +1,4 @@
+import { Photo } from './../../_models/photo';
 import { ToastrService } from 'ngx-toastr';
 import { take } from 'rxjs/operators';
 import { Member } from './../../_models/member';

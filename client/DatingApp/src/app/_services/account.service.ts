@@ -31,15 +31,15 @@ export class AccountService {
     return this.http.post<User>(this.baseUrl + 'account/register', model).pipe(
       map(response => {
         if (response){
-        const user = response as User;
-        localStorage.setItem('user', JSON.stringify(user));
-        this.currentUserSource.next(user);
+        const user = response as User; 
+        this.setCurrentUser(user);
         }
       })
     )
   }
 
   setCurrentUser(user: User) {
+     localStorage.setItem('user', JSON.stringify(user));
      this.currentUserSource.next(user);
   }
 
